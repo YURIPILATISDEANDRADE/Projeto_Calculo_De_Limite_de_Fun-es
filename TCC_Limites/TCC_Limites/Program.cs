@@ -26,6 +26,9 @@ namespace TCC_Limites
             String[] Opera = new string[Qtd - 1];
             double[] resultadosD = new double[Qtd];
             double[] resultadosE = new double[Qtd];
+            double[] resultadosD2 = new double[Qtd];
+            double[] resultadosE2 = new double[Qtd];
+
 
             // anotar a expressão inserida
 
