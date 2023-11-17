@@ -13,3 +13,10 @@ Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.SuggestedBindingRedirect
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.CoreCompileInputs.cache
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.exe
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.pdb
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.AssemblyReference.cache
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.CoreCompileInputs.cache
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.exe
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.pdb
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.exe.config
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.exe
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.pdb

@@ -28,3 +28,10 @@ Z:\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\obj\Debug\Aula_3010_Dica_2_PBL.pdb
 Z:\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.exe.config
 Z:\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.exe
 Z:\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.pdb
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.exe.config
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.exe
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\bin\Debug\Aula_3010_Dica_2_PBL.pdb
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\obj\Debug\Aula_3010_Dica_2_PBL.csproj.AssemblyReference.cache
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\obj\Debug\Aula_3010_Dica_2_PBL.csproj.CoreCompileInputs.cache
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\obj\Debug\Aula_3010_Dica_2_PBL.exe
+C:\Users\yurip\Downloads\TCC_LIMITE-main\TCC_LIMITE-main\Aula_3010_Dica_2_PBL\Aula_3010_Dica_2_PBL\obj\Debug\Aula_3010_Dica_2_PBL.pdb

@@ -10,14 +10,20 @@ namespace TCC_Limites
     {
         static void Main(string[] args)
         {
-            int valorX, Qtd;
-            
+            int valorX, Qtd, Qtd2 = 2;
+            char Sub = 'A';
+
 
             double[] XDireita = new double[7];
             double[] XEsquerda = new double[7];
 
             double[] RDireita = new double[7];
             double[] REsquerda = new double[7];
+
+            String[] Termos2 = new string[Qtd2];
+            String[] Operacoes2 = new string[Qtd2 - 1];
+            double[] resultadosD2 = new double[Qtd2];
+            double[] resultadosE2 = new double[Qtd2];
 
             Console.Write("Quantos termos para inserir na Expressão? ");
             Qtd = int.Parse(Console.ReadLine());
@@ -26,15 +32,12 @@ namespace TCC_Limites
             String[] Opera = new string[Qtd - 1];
             double[] resultadosD = new double[Qtd];
             double[] resultadosE = new double[Qtd];
-            double[] resultadosD2 = new double[Qtd];
-            double[] resultadosE2 = new double[Qtd];
-
 
             // anotar a expressão inserida
 
             for (int Num = 0; Num < Qtd; Num++)
             {
-                Console.Write($"\nInforme o {Num + 1}° termo da expressão:");
+                Console.Write($"\nInforme o {Num + 1}° termo da expressão: ");
                 Termo[Num] = Console.ReadLine();
 
                 //verifica se tem que solicitar a operação
@@ -42,21 +45,66 @@ namespace TCC_Limites
                 {
                     Console.Write($"\nDigite o {Num + 1} operador (+ - * /): ");
                     Opera[Num] = Console.ReadLine();
-                    Console.WriteLine();
                 }
             }
+
+            Console.Write($"\nVoce desejaria Insirir uma expressão para dividir a anterior?: (Y/N) ");
+            Sub = Console.ReadLine().ToUpper()[0];
 
             for (int Num = 0; Num < Qtd; Num++)
             {
                 if (Num != Qtd - 1)
                     Console.Write($"{Termo[Num]} {Opera[Num]} ");
                 else
-                    Console.Write($"{Termo[Num]}");
+                    Console.Write($"{Termo[Num]}\n");
             }
 
-            Console.WriteLine("\n\nDigite o valor de X:");
+            if (Sub == 'Y') // expressão para dividir 
+            {
+                Console.Write("\nQuantos termos? ");
+                Qtd2 = int.Parse(Console.ReadLine());
+
+                //criar os vetores de acordo com os termos
+
+                //solicitar a função
+                for (int parte = 0; parte < Qtd2; parte++)
+                {
+                    Console.Write($"\nInforme o {parte + 1}° termo da expressão: ");
+                    Termos2[parte] = Console.ReadLine();
+
+                    //verifica se tem que solicitar a operação
+                    if (parte != Qtd2 - 1)
+                    {
+                        Console.Write($"\nDigite o {parte + 1} operador (+ - * /): ");
+                        Operacoes2[parte] = Console.ReadLine();
+                    }
+                }
+
+                Console.WriteLine();
+
+                //exibindo a função
+                for (int parte = 0; parte < Qtd; parte++)
+                {
+                    if (parte != Qtd - 1)
+                        Console.Write($"{Termo[parte]} {Opera[parte]} ");
+                    else
+                        Console.Write($"{Termo[parte]}");
+                }
+
+                Console.Write($"\n======================\n");
+
+                for (int parte = 0; parte < Qtd2; parte++)
+                {
+                    if (parte != Qtd2 - 1)
+                        Console.Write($"{Termos2[parte]} {Operacoes2[parte]} ");
+                    else
+                        Console.Write($"{Termos2[parte]}\n\n");
+                }
+            }
+   
+            Console.WriteLine("\nDigite o valor de X: ");
             valorX = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("=================================");
+            Console.WriteLine("\n=================================");
 
             //calcular a expressão
 
@@ -81,11 +129,24 @@ namespace TCC_Limites
                 for (int parte = 0; parte < Qtd; parte++)
                 {
                     resultadosD[parte] = Termonologia(XDireita[D], Termo[parte]);
+                    
+                    if (Sub == 'Y') // expressão para dividir 
+                    {
+                        resultadosD2[parte] = Termonologia(XDireita[D], Termos2[parte]);
+
+                    }
+
                 }
 
                 for (int l = 0; l < Qtd - 1; l++)
                 {
                     RDireita[D] = Kickassia(Opera[l], resultadosD[l], resultadosD[l + 1], RDireita[D]);
+
+                    if (Sub == 'Y') // expressão para dividir 
+                    {
+                        RDireita[D] = RDireita[D] / Kickassia(Operacoes2[l], resultadosD2[l], resultadosD2[l + 1], RDireita[D]);
+
+                    }
                 }
 
             }
@@ -95,11 +156,25 @@ namespace TCC_Limites
                 for (int parte = 0; parte < Qtd; parte++)
                 {
                     resultadosE[parte] = Termonologia(XEsquerda[E], Termo[parte]);
+
+                    if (Sub == 'Y') // expressão para dividir 
+                    {
+                        resultadosE2[parte] = Termonologia(XEsquerda[E], Termos2[parte]);
+
+                    }
+
                 }
 
                 for (int l = 0; l < Qtd - 1; l++)
                 {
                     REsquerda[E] = Kickassia(Opera[l], resultadosE[l], resultadosE[l + 1], REsquerda[E]);
+
+                    if (Sub == 'Y') // expressão para dividir 
+                    {
+                        REsquerda[E] = REsquerda[E] / Kickassia(Operacoes2[l], resultadosE2[l], resultadosE2[l + 1], REsquerda[E]);
+
+                    }
+
                 }
 
             }

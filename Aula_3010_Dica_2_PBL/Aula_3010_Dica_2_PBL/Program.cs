@@ -31,7 +31,7 @@ namespace Aula_3010_Dica_2_PBL
             //solicitar a função
             for (int parte=0; parte < qtdtermos; parte++)
             {
-                Console.Write($"Informe o {parte + 1} termo:");
+                Console.Write($"Informe o {parte + 1} termo: ");
                 termos[parte] = Console.ReadLine();
 
                 //verifica se tem que solicitar a operação
@@ -59,6 +59,7 @@ namespace Aula_3010_Dica_2_PBL
             int valor = 0;
             Console.Write("\n\nDigite o valor de X: ");
             valor = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n");
 
             //vamos varrer cada Termo
             for (int parte = 0; parte < qtdtermos; parte++)
@@ -72,7 +73,7 @@ namespace Aula_3010_Dica_2_PBL
                 if (parte != qtdtermos - 1)
                     Console.Write($"{resultados[parte]} {operacoes[parte]} ");
                 else
-                    Console.Write($"{resultados[parte]}");
+                    Console.Write($"{resultados[parte]}\n");
             }
 
 
@@ -83,16 +84,16 @@ namespace Aula_3010_Dica_2_PBL
                 resultado = Kickassia(operacoes[l], resultados[l], resultados[l + 1], resultado);
             }
 
-            Console.Write($"\n\n{resultado} ");
+            Console.Write($"\n{resultado} ");
 
 
-            Console.Write($"\n Voce desejaria Insirir uma expressão para dividir a anterior? Y/N");
+            Console.Write($"\nVoce desejaria Insirir uma expressão para dividir a anterior? (Y/N) ");
             Sub = Console.ReadLine().ToUpper()[0];
 
 
             if (Sub == 'Y') // expressão para dividir 
             {
-                Console.Write("Quantos termos? ");
+                Console.Write("\nQuantos termos? ");
                 qtdtermos2 = int.Parse(Console.ReadLine());
 
                 //criar os vetores de acordo com os termos
@@ -127,15 +128,16 @@ namespace Aula_3010_Dica_2_PBL
                         Console.Write($"{termos[parte]}");
                 }
 
+                Console.Write($"\n======================\n");
+
                 for (int parte = 0; parte < qtdtermos2; parte++)
                 {
                     if (parte != qtdtermos2 - 1)
                         Console.Write($"{Termos2[parte]} {Operacoes2[parte]} ");
                     else
-                        Console.Write($"{Termos2[parte]}");
+                        Console.Write($"{Termos2[parte]}\n\n");
                 }
 
-                Console.Write($"\n================ ");
 
                 for (int parte = 0; parte < qtdtermos2; parte++)
                 {
@@ -148,7 +150,7 @@ namespace Aula_3010_Dica_2_PBL
                     if (parte != qtdtermos2 - 1)
                         Console.Write($"{Resultados2[parte]} {Operacoes2[parte]} ");
                     else
-                        Console.Write($"{Resultados2[parte]}");
+                        Console.Write($"{Resultados2[parte]}\n");
                 }
 
 
@@ -164,7 +166,7 @@ namespace Aula_3010_Dica_2_PBL
             }
             
             
-            Console.Write($"\n\n{resultado} ");
+            Console.Write($"\n{resultado} ");
 
             Console.ReadKey();
         }
