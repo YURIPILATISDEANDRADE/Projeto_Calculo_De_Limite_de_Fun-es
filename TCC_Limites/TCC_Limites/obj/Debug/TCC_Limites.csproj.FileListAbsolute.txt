@@ -9,7 +9,6 @@ Z:\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.exe.config
 Z:\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.exe
 Z:\TCC_Limites\TCC_Limites\bin\Debug\TCC_Limites.pdb
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.AssemblyReference.cache
-Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.SuggestedBindingRedirects.cache
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.csproj.CoreCompileInputs.cache
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.exe
 Z:\TCC_Limites\TCC_Limites\obj\Debug\TCC_Limites.pdb

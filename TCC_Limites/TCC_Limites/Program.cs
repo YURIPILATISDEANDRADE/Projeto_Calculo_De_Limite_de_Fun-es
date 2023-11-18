@@ -12,6 +12,7 @@ namespace TCC_Limites
         {
             int valorX, Qtd, Qtd2 = 2;
             char Sub = 'A';
+            double RDireita2 = 1, REsquerda2 = 1;
 
 
             double[] XDireita = new double[7];
@@ -144,9 +145,11 @@ namespace TCC_Limites
 
                     if (Sub == 'Y') // expressão para dividir 
                     {
-                        RDireita[D] = RDireita[D] / Kickassia(Operacoes2[l], resultadosD2[l], resultadosD2[l + 1], RDireita[D]);
+                        RDireita2 = Kickassia(Operacoes2[l], resultadosD2[l], resultadosD2[l + 1], RDireita[D]);
 
                     }
+
+                    RDireita[D] = RDireita[D] / RDireita2;
                 }
 
             }
@@ -172,8 +175,9 @@ namespace TCC_Limites
                     if (Sub == 'Y') // expressão para dividir 
                     {
                         REsquerda[E] = REsquerda[E] / Kickassia(Operacoes2[l], resultadosE2[l], resultadosE2[l + 1], REsquerda[E]);
-
                     }
+
+                    REsquerda[E] = REsquerda[E] / REsquerda2;
 
                 }
 
@@ -198,11 +202,20 @@ namespace TCC_Limites
 
             }
 
-
-
             Console.ReadKey();
 
 
+            if (Math.Round(REsquerda[6], MidpointRounding.AwayFromZero) == Math.Round(RDireita[6], MidpointRounding.AwayFromZero) || 
+                Math.Round(REsquerda[6], 4, MidpointRounding.AwayFromZero) == Math.Round(RDireita[6], 4, MidpointRounding.AwayFromZero)) // compara para ver se os resultados sao iguais
+            {
+                Console.WriteLine($"\n\nLimites são iguais, equivalentes a {Math.Round(REsquerda[6],MidpointRounding.AwayFromZero)} ");
+            }
+            else
+            {
+                Console.WriteLine($"\n\nLimites são diferentes, equivalentes a: D: {Math.Round(RDireita[6], 4, MidpointRounding.AwayFromZero)} E: {Math.Round(REsquerda[6], 4, MidpointRounding.AwayFromZero)} ");
+            }
+
+            Console.ReadKey();
 
         }
 
