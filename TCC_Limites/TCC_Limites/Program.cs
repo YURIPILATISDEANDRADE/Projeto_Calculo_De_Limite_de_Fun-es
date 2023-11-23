@@ -22,10 +22,8 @@ namespace TCC_Limites
             double[] RDireita2 = new double[7];
             double[] REsquerda2 = new double[7];
 
-            String[] Termos2 = new string[Qtd2];
-            String[] Opera2 = new string[Qtd2 - 1];
-            double[] resultadosD2 = new double[Qtd2];
-            double[] resultadosE2 = new double[Qtd2];
+            String[] Termos2, Opera2;
+            double[] resultadosD2, resultadosE2;
 
             Console.Write("Quantos termos para inserir na Expressão? ");
             Qtd = int.Parse(Console.ReadLine());
@@ -63,9 +61,14 @@ namespace TCC_Limites
 
             if (Sub == 'Y') // expressão para dividir 
             {
-                Console.Write("\nExpressão para dividir ");
+                Console.Write("\nExpressão para dividir\n");
                 Console.Write("\nQuantos termos? ");
                 Qtd2 = int.Parse(Console.ReadLine());
+
+                Termos2 = new string[Qtd2];
+                Opera2 = new string[Qtd2 - 1];
+                resultadosD2 = new double[Qtd2];
+                resultadosE2 = new double[Qtd2];
 
                 //criar os vetores de acordo com os termos
 
@@ -104,6 +107,16 @@ namespace TCC_Limites
                         Console.Write($"{Termos2[parte]}\n\n");
                 }
             }
+            else
+            {
+                Qtd2 = 0;
+                Termos2 = new string[0];
+                Opera2 = new string[0];
+                resultadosD2 = new double[0];
+                resultadosE2 = new double[0];
+            }
+            
+
    
             Console.WriteLine("\nDigite o valor de X: ");
             valorX = Int32.Parse(Console.ReadLine());
@@ -155,8 +168,8 @@ namespace TCC_Limites
 
                     for (int l = 0; l < Qtd - 1; l++)
                     {
-                        RDireita2[D] = Kickassia(Opera2[l], resultadosD2[l], resultadosD2[l + 1], RDireita[D]);
-                        REsquerda2[D] = Kickassia(Opera2[l], resultadosE2[l], resultadosE2[l + 1], REsquerda[D]);
+                        RDireita2[D] = Kickassia(Opera2[l], resultadosD2[l], resultadosD2[l + 1], RDireita2[D]);
+                        REsquerda2[D] = Kickassia(Opera2[l], resultadosE2[l], resultadosE2[l + 1], REsquerda2[D]);
                     }
 
                 }
